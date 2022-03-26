@@ -1,0 +1,13 @@
+﻿<Window x:Class="EthicsFoodSecondTry.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EthicsFoodSecondTry"
+        mc:Ignorable="d"
+        Title="CalcFood" Height="134" Width="359">
+    <Grid>
+        <Button x:Name="Food" Content="Еда" Margin="30,0,224,0" Height="32" VerticalAlignment="Center" Click="Food_Click"/>
+        <Button x:Name="Dish" Content="Блюда" Margin="212,0,37,0" Height="32" VerticalAlignment="Center" Click="Dish_Click"/>
+    </Grid>
+</Window>

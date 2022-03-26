@@ -1,0 +1,56 @@
+﻿<Window x:Class="EthicsFoodSecondTry.DataDishes.CreateDish"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:EthicsFoodSecondTry.DataDishes"
+        mc:Ignorable="d"
+        Title="DishCreate" Height="486" Width="418">
+    <Grid Height="458" VerticalAlignment="Bottom">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="319*"/>
+            <RowDefinition Height="139*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="67*"/>
+            <ColumnDefinition Width="70*"/>
+            <ColumnDefinition Width="72*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="2" Grid.RowSpan="2">
+            <Label Content="ккал" HorizontalAlignment="Left" Margin="10,9,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="calories" HorizontalAlignment="Center" Margin="0,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+            <Label Content="протеины" HorizontalAlignment="Left" Margin="11,58,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="proteins" HorizontalAlignment="Center" Margin="0,84,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+            <Label Content="жиры" HorizontalAlignment="Left" Margin="10,107,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="fats" HorizontalAlignment="Center" Margin="0,133,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+            <Label Content="угливоды" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="carbohydrates" HorizontalAlignment="Center" Margin="0,187,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131"/>
+            <Label Content="Название блюда" HorizontalAlignment="Left" Margin="10,221,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="dish_name" HorizontalAlignment="Center" Margin="0,251,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="131" Height="22"/>
+            <Button x:Name="dish_create" Content="Приготовить блюдо" HorizontalAlignment="Center" Margin="0,278,0,0" VerticalAlignment="Top" Height="24" Width="131" Click="dish_create_Click"/>
+            <Button x:Name="dish_del" Content="Удалить блюдо" HorizontalAlignment="Center" Margin="0,307,0,0" VerticalAlignment="Top" Height="24" Width="131" Click="dish_del_Click"/>
+            <Button x:Name="dish_save" Content="Сохранить блюдa(csv)" HorizontalAlignment="Center" Margin="0,336,0,0" VerticalAlignment="Top" Height="24" Width="131" Click="dish_save_Click"/>
+            <Button x:Name="dish_load" Content="Загрузить блюдa" HorizontalAlignment="Center" Margin="0,365,0,0" VerticalAlignment="Top" Height="24" Width="132" Click="dish_load_Click"/>
+        </Grid>
+        <Grid Grid.Column="1" Height="133" VerticalAlignment="Top">
+            <ListBox x:Name="dish_list" SelectedIndex="0" Margin="0,50,0,0" SelectionChanged="dish_list_SelectionChanged"/>
+            <Label Content="Меню" Margin="5,10,10,0" Panel.ZIndex="1" Height="35" VerticalAlignment="Top"/>
+        </Grid>
+        <Grid>
+            <ListBox x:Name="ingridients_list" SelectedIndex="0" Height="269" VerticalAlignment="Top" Margin="0,50,0,0" SelectionChanged="ingridients_list_SelectionChanged"/>
+            <Label Content="Ингридиенты" Margin="10,10,10,274"/>
+        </Grid>
+        <Grid Grid.ColumnSpan="2" Height="129" VerticalAlignment="Top" Grid.Row="1">
+            <Label Content="Ингридиенты" HorizontalAlignment="Left" Margin="10,39,0,0" VerticalAlignment="Top"/>
+            <Label Content="Вес" HorizontalAlignment="Left" Margin="140,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.289,0.464"/>
+            <TextBox x:Name="ingridient_weight" Margin="140,63,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="22"/>
+            <Button x:Name="ingridient_add" Content="Добавить ингрид." HorizontalAlignment="Left" Margin="10,95,0,0" VerticalAlignment="Top" Height="24" Width="120" Click="Add_Ingridient_Click"/>
+            <Button x:Name="ingridient_del" Content="Удалить ингрид." HorizontalAlignment="Left" Margin="140,95,0,0" VerticalAlignment="Top" Height="24" Width="120" Click="ingridient_del_Click"/>
+            <ComboBox x:Name="ingridients_ComboBox" HorizontalAlignment="Left" Margin="10,63,0,0" VerticalAlignment="Top" Width="120" Loaded="ComboBox_Ingridients_Loaded"/>
+        </Grid>
+        <ListBox x:Name="dish_ingridients_list" SelectedIndex="0" Margin="0,188,1,0" Grid.Column="1" SelectionChanged="dish_ingridients_list_SelectionChanged"/>
+        <Label Content="Ингридиенты блюда" Margin="5,148,5,0" Panel.ZIndex="1" Height="35" VerticalAlignment="Top" Grid.Column="1"/>
+
+
+    </Grid>
+</Window>
